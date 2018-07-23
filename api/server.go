@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const serverAddr = "localhost:9999"
+const serverAddr = "server:9999"
 
 type Result struct {
 	Number    string

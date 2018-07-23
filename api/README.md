@@ -1,27 +1,19 @@
 ### Description
 This project is a Golang API accepting in the query string a number as parameter, and calculate the factorial of this number by sending a request to the Factorial TCP server.
 
-### Usage
-This API accepts HTTP GET request to the root path `/`, It accept the first appended query string param and calculate the factorial of the number
-Ex : `GET /4` would reproduce `24` 
+### Docker File description
 
-### How to run Localy
-`go run server.go`
+To build and run the application,we a are using a Dockerfile.
+Based on golang:1.8 image from dockerhub, we copy the work directory into the container, then we install the prerequisites before starting the app.
 
-### How to build
-`go build server.go`
-You can use environment variables to specify the destination binary arch `GOOS` and `GOARCH`
-
-#### Example building in different ARCH:
-MacOS : `GOOS=darwin GOARCH=amd64 go build server.go`
-Linux 64 : `GOOS=linux GOARCH=amd64 go build server.go`
 
 ### Usage
-`./server`
+Use the docker compose file from the project root directory.
 
-### Dependencies
-* Golang 1.7+
-* TCP Factorial server
+---- ONLY FOR TEST PURPOSE ----
+You can build and run the Golang API in a standalone mode using :
+`docker build -t devops-test_api .`
+`docker run --name API -dt devops-test_api`
 
 ### TODO
 * Register the API IP:port in a service discovery once UP

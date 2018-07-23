@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './App.css';
 
-const API_URL = "http://localhost:8080/"
+const API_URL = "http://api:8080/"
 
 class App extends React.Component {
   constructor(props) {
