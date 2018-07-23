@@ -1,15 +1,25 @@
 version: '3'
+
+networks:
+  devops-test:
+    driver: bridge
+
 services:
   front:
     build: front/
     ports:
      - "80:80"
+    networks:
+     - devops-test
   api:
     build: api/
     ports:
      - "8080:8080"
+    networks:
+     - devops-test
   server:
     build: server/
     ports:
      - "9999:9999"
-    
+    networks:
+     - devops-test
