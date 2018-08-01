@@ -2,13 +2,14 @@
 
 #### Prerequisites
 Docker installed.
+CORS extension on browser to test the app ( //TODO : fix the CORS problem )
 
 #### Usage
 docker-compose up
 
 #### docker-compose file description
 
-We define a network for our apps, using the 'bridge' network driver.
+
 
 We have 4 services :
 * Front:
@@ -19,5 +20,7 @@ Builds the dockerfile from the directory front and ties the container's port 300
 Builds the dockerfile from the directory front and expose port 9999.
 * API :
 Builds the dockerfile from the directory api and expose port 8080.
+
+All the services are linked together with docker compose.
 
 Each Dockerfile is documented in the related directory

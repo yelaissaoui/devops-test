@@ -14,7 +14,7 @@ describe('Factorial', () => {
   */
   describe('/GET 4', () => {
       it('it should calculate factorial of 4', (done) => {
-        chai.request("http://localhost:8080")
+        chai.request("http://localhost:8000")
             .get('/4')
             .end((err, res) => {
                 res.should.have.status(200);
